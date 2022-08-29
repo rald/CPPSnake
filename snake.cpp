@@ -103,6 +103,23 @@ int main(void)
 
 			usleep(100000);
 
+			moving = true;
+			for (int i = 0; i < len; i++)
+			{
+				int nx=x[0] + xi;
+				int ny=y[0] + yi;
+
+				if(nx<0) nx=cols-1;
+				if(ny<0) ny=rows-2;
+        if(nx>cols-1) nx=0;
+        if(ny>rows-2) ny=0;
+
+        if(nx==x[i] && ny==y[i]) {
+          moving=false;
+        }
+        
+			}
+
 			if (moving)
 			{
 				if(len>0) {
@@ -186,23 +203,6 @@ int main(void)
 					}
 					break;
 				}
-			}
-
-			moving = true;
-			for (int i = 0; i < len; i++)
-			{
-				int nx=x[0] + xi;
-				int ny=y[0] + yi;
-
-				if(nx<0) nx=cols-1;
-				if(ny<0) ny=rows-2;
-        if(nx>cols-1) nx=0;
-        if(ny>rows-2) ny=0;
-
-        if(nx==x[i] && ny==y[i]) {
-          moving=false;
-        }
-        
 			}
 
 			if (moving)
