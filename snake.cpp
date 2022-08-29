@@ -101,8 +101,6 @@ int main(void)
 			addch('X');
 			refresh();
 
-			usleep(100000);
-
 			moving = true;
 			for (int i = 0; i < len; i++)
 			{
@@ -116,9 +114,10 @@ int main(void)
 
         if(nx==x[i] && ny==y[i]) {
           moving=false;
-        }
-        
+        } 
 			}
+
+			usleep(100000);
 
 			if (moving)
 			{
@@ -128,7 +127,6 @@ int main(void)
 					refresh();
 				}
 			}
-
 
 			if (x[0] == fx && y[0] == fy)
 			{
