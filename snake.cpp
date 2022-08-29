@@ -33,7 +33,7 @@ int kbhit(void)
 bool food()
 {
 	int nx = rand() % (cols-1);
-	int ny = rand() % (rows-4);
+	int ny = rand() % (rows-2);
 
 	bool again;
 
@@ -52,7 +52,7 @@ bool food()
 				{
 					fx = 0;
 					fy++;
-					if (fy > rows-4)
+					if (fy > rows-2)
 					{
 						fy = 0;
 					}
@@ -216,9 +216,9 @@ int main(void)
 				x[0] = 0;
 				
 			if (y[0] < 0)
-				y[0] = rows - 4;
+				y[0] = rows - 2;
 				
-			if (y[0] > rows - 4)
+			if (y[0] > rows - 2)
 				y[0] = 0;
 		}
 	}
