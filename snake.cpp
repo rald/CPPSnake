@@ -87,6 +87,12 @@ int main(void)
 	nodelay(stdscr, TRUE);
 	curs_set(0);
 
+  start_color();
+
+  init_pair(1,COLOR_WHITE,COLOR_BLUE);
+
+  wbkgd(stdscr,COLOR_PAIR(1));
+
 	getmaxyx(stdscr, rows, cols);
 	x[0] = 1;
 	y[0] = 1;
