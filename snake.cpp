@@ -87,11 +87,11 @@ int main(void)
 	nodelay(stdscr, TRUE);
 	curs_set(0);
 
-  start_color();
+	start_color();
 
-  init_pair(1,COLOR_WHITE,COLOR_BLUE);
+	init_pair(1,COLOR_WHITE,COLOR_BLUE);
 
-  wbkgd(stdscr,COLOR_PAIR(1));
+	wbkgd(stdscr,COLOR_PAIR(1));
 
 	getmaxyx(stdscr, rows, cols);
 	x[0] = 1;
@@ -225,12 +225,12 @@ int main(void)
 
 				if(nx<0) nx=cols-1;
 				if(ny<0) ny=rows-2;
-        if(nx>cols-1) nx=0;
-        if(ny>rows-2) ny=0;
+				if(nx>cols-1) nx=0;
+				if(ny>rows-2) ny=0;
 
-        if(nx==x[i] && ny==y[i]) {
-          moving=false;
-        } 
+				if(nx==x[i] && ny==y[i]) {
+					moving=false;
+				} 
 			}
 		}
 	}
